@@ -1,6 +1,4 @@
--- Gestione del cursore
-
--- if nome_cur%notfound then
+-- Gestione del cursore in PL/SQL
 
 -- ROWTYPE è utile quando bisogna scrivere dei dati utilizzando un cursore.
 set serveroutput on 
@@ -17,13 +15,12 @@ BEGIN
 
 	end loop;
 	
-
 end;
 /
 
 
 -- CON IL FOR NON POSSIAMO MODIFICARE I DATI SUI QUALI STIAMO CICLANDO.
--- PER LA MODIFICA DOBBIAMO USARE WHILE O LOOP COME VISTO PRECEDENTEMENTE.
+-- PER LA MODIFICA DOBBIAMO USARE WHILE O LOOP COME VISTO PRECEDENTEMENTE (vedi altre procedure PL/SQL).
 
 
 

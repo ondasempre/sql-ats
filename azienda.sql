@@ -1,4 +1,4 @@
--- Progetto Azienda Accenture
+-- Progetto Azienda Accenture :: softwarehouse
 
 create table Dipendente (
 	cf varchar(16) NOT NULL,
