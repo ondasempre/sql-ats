@@ -19,6 +19,5 @@ BEGIN
 
 	end loop;
 	close nominativi_cur;
--- I commit fatti in una transazione andranno a committare anche i dati 
--- dati della procedura.
+-- I commit fatti in una transazione andranno a committare anche i dati della procedura.
 commit;
