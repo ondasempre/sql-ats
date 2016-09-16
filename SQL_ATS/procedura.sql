@@ -1,7 +1,10 @@
--- Dichiaro delle variabili e creo un cursore in maniera esplicita
+-- DICHIARAZIONE DI UN CURSORE ESPLICITO PL/SQL
+
+-- dichiaro delle variabili segliendo il tipo del dato
 declare 
 c nominativi.cognome%TYPE;
 n nominativi.nome%TYPE;
+-- dichiarazione del cursore per ciclare sulla tab Nominativi (crata nel db Oracle 10g)
 cursor nominativi_cur is 
 select * from nominativi
 for update;
