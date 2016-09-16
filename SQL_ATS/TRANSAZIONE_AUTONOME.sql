@@ -4,8 +4,9 @@ create table Logdip (
 	datamodifica timestamp
 );
 
--- Procedura gestisci log
+-- ESEMPIO DI PROCEDURA PL/SQL che gestisce i log
 create or replace procedure gestiscilog (p_username varchar2, p_data timestamp) as
+-- pragma blocca autocommit delle transazioni esterne
 pragma autonomus_trasaction
 BEGIN
 	insert into logdip values(p_username, p_data);
@@ -14,7 +15,7 @@ BEGIN
 end;
 /
 
-
+-- PROCEDURA GENITORE CHE ESEGUE gestiscilog (p_username varchar2, p_data timestamp)
 create or replace procedure genitore (p_nome varchar2,  p_cognome varchar2) as 
 
 	BEGIN 
@@ -27,5 +28,5 @@ create or replace procedure genitore (p_nome varchar2,  p_cognome varchar2) as
 end;
 /
 
--- Se faccio rollback perdo i dati di Nominativi.
+-- Se faccio rollback perdo i dati di Nominativi (esempio tabelle in database Oracle 10g).
 -- Attenzione ad usare transazioni autonome....
